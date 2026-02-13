@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Palette Generator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+  <div class="container">
+
+    <header class="header">
+      <h1>Color Palette Generator</h1>
+      <p>Swatch it up!</p>
+    </header>
+
+    <main class="unified-container">
+
+      <div class="flex-row-center">
+        <div class="input-group" style="max-width: 400px;">
+          <div class="color-picker-wrapper">
+            <input type="color" id="colorPicker" value="#3A86FF">
+          </div>
+          <input type="text" id="hexInput" placeholder="#3A86FF" class="input-styled input-with-icon" maxlength="7">
+        </div>
+        <button id="generateBtn" class="btn-elegant">Generate</button>
+      </div>
+
+      <div class="tabs-nav" role="tablist">
+        <button type="button" role="tab" class="tab-btn" aria-selected="true"
+          data-mode="complementary">Complementary</button>
+        <button type="button" role="tab" class="tab-btn" aria-selected="false" data-mode="triadic">Triadic</button>
+        <button type="button" role="tab" class="tab-btn" aria-selected="false" data-mode="analogous">Analogous</button>
+        <button type="button" role="tab" class="tab-btn" aria-selected="false"
+          data-mode="monochromatic">Monochromatic</button>
+      </div>
+
+      <div class="swatches-grid" id="swatchesContainer">
+        <div class="swatch-card group">
+          <div class="swatch-color" id="swatchColor1" style="background-color: #3A86FF;"></div>
+          <div class="swatch-info">
+            <span class="swatch-hex" id="swatchHex1">#3A86FF</span>
+            <button class="btn-elegant btn-sm copy-trigger" data-copy-target="swatchHex1">Copy</button>
+          </div>
+        </div>
+        <div class="swatch-card group">
+          <div class="swatch-color" id="swatchColor2" style="background-color: #3A86FF;"></div>
+          <div class="swatch-info">
+            <span class="swatch-hex" id="swatchHex2">#3A86FF</span>
+            <button class="btn-elegant btn-sm copy-trigger" data-copy-target="swatchHex2">Copy</button>
+          </div>
+        </div>
+        <div class="swatch-card group">
+          <div class="swatch-color" id="swatchColor3" style="background-color: #3A86FF;"></div>
+          <div class="swatch-info">
+            <span class="swatch-hex" id="swatchHex3">#3A86FF</span>
+            <button class="btn-elegant btn-sm copy-trigger" data-copy-target="swatchHex3">Copy</button>
+          </div>
+        </div>
+        <div class="swatch-card group">
+          <div class="swatch-color" id="swatchColor4" style="background-color: #3A86FF;"></div>
+          <div class="swatch-info">
+            <span class="swatch-hex" id="swatchHex4">#3A86FF</span>
+            <button class="btn-elegant btn-sm copy-trigger" data-copy-target="swatchHex4">Copy</button>
+          </div>
+        </div>
+        <div class="swatch-card group">
+          <div class="swatch-color" id="swatchColor5" style="background-color: #3A86FF;"></div>
+          <div class="swatch-info">
+            <span class="swatch-hex" id="swatchHex5">#3A86FF</span>
+            <button class="btn-elegant btn-sm copy-trigger" data-copy-target="swatchHex5">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="flex-row-center" style="margin-top: 1rem;">
+        <button id="copyAllBtn" class="btn-elegant">Copy All Codes</button>
+        <button id="exportCssBtn" class="btn-elegant">Export as CSS</button>
+      </div>
+
+    </main>
+  </div>
+
+  <div id="toast">Copied to clipboard!</div>
+
+  <script src="script.js"></script>
+</body>
+
+</html>
